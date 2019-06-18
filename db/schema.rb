@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_17_211029) do
+ActiveRecord::Schema.define(version: 2019_06_18_142923) do
 
   create_table "locations", force: :cascade do |t|
     t.string "name"
@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 2019_06_17_211029) do
 
   create_table "trees", force: :cascade do |t|
     t.string "species"
-    t.integer "age"
+    t.integer "age", default: 0
     t.integer "user_id"
     t.integer "location_id"
     t.datetime "created_at", null: false
