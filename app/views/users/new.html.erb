@@ -1,0 +1,10 @@
+<h1> Create new User </h1>
+
+  <ul>
+    <%=form_for @user do |f| %>
+    <%=f.label "Name" %>
+    <li><%=f.text_field :name %></li>
+    <%=f.submit %>
+    <%end%>
+    </ul>
+    <br>  <a href="javascript:history.go(-1)"> Go Back </a> <br>
