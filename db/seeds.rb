@@ -16,3 +16,6 @@ coney_island = Location.create(name: "Coney Island")
 tree1 = Tree.create(species: "oak", user_id: 1, location_id: 1)
 tree2 = Tree.create(species: "elm", user_id: 1, location_id: 1)
 tree3 = Tree.create(species: "spruce", user_id: 1, location_id: 1)
+
+# USERS
+joe = User.create(name: "Joe")

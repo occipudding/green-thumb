@@ -1,0 +1,3 @@
+<h1><%= @tree.species %></h1>
+<h2>Located at: <%= Location.find(@tree.location_id).name %></h2>
+<h3>Planted by: <%= User.find(@tree.user_id).name %></h3>
