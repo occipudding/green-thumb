@@ -1,5 +1,5 @@
 <h1><%= @location.name %></h1>
 <h2>Trees at this location:</h2>
 <% @trees.each do |tree| %>
-<h3><%= tree.species %></h3>
+<h3><%= tree.species.capitalize %>, planted by: <%= User.find(tree.user_id).name %></h3>
 <% end %>
