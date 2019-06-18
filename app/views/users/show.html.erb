@@ -1,0 +1,9 @@
+
+<ul> <h1>Welcome to <%= @user.name %> 's Page </h1> </ul>
+
+<ul> <label> Have a look at my tree babies 🌿👼🏿👶🏾 </label> </ul>
+  <marquee> 🌳🌴🌲 🌳🌴🌲  </marquee>
+
+  <% @trees.each do |tree| %>
+ <ol> <%= @tree.species%> </ol>
+  <% end  %>
