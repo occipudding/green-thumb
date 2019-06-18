@@ -26,6 +26,6 @@ tanuka = User.create(name:"Tanuka")
 joe = User.create(name: "Joe")
 
 # TREES
-tree1 = Tree.create(species: "oak", user_id: 1, location_id: 1)
-tree2 = Tree.create(species: "elm", user_id: 1, location_id: 1)
-tree3 = Tree.create(species: "spruce", user_id: 1, location_id: 1)
+tree1 = Tree.create(species: "oak", user_id: avi.id, location_id: canarsie.id)
+tree2 = Tree.create(species: "elm", user_id: daniela.id, location_id: east_new_york.id)
+tree3 = Tree.create(species: "spruce", user_id: joe.id, location_id: park_slope.id)
