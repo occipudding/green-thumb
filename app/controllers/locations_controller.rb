@@ -4,5 +4,7 @@ class LocationsController < ApplicationController
   end
 
   def show
+    @location = Location.find(params[:id])
+    @trees = Tree.select{|t| }
   end
 end
