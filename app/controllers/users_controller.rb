@@ -1,9 +1,14 @@
 class UsersController < ApplicationController
 
   def index
+    @users = User.all
   end
 
   def show
+    @user = User.find(params[:id])
+    @trees = Tree.all
+     # @trees.each do |tree|
+     #   tree.user.name
   end
 
   def new
