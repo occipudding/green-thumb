@@ -5,6 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Location.destroy_all
+User.destroy_all
+Tree.destroy_all
+
 
 canarsie = Location.create(name: "Canarsie")
 east_new_york = Location.create(name: "East New York")
@@ -25,4 +29,3 @@ joe = User.create(name: "Joe")
 tree1 = Tree.create(species: "oak", user_id: 1, location_id: 1)
 tree2 = Tree.create(species: "elm", user_id: 1, location_id: 1)
 tree3 = Tree.create(species: "spruce", user_id: 1, location_id: 1)
-
