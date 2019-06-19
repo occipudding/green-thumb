@@ -60,3 +60,12 @@ a:link {
 a:visited {
   color: purple;
 }
+
+img {
+  max-width: 300px;
+  max-height: 200px;
+}
+
+.tree-image {
+  text-align: center;
+}
