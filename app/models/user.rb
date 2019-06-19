@@ -1,13 +1,8 @@
 class User < ApplicationRecord
-  has_many:trees
-  has_many:locations, through: :trees
+  has_many :trees
+  has_many :locations, through: :trees
 
-   validates :name,  presence: true
-   validates :name, length: { minimum:6 }
-   # validates :name, :presence => {:message => "must be given please"}
-   validates :name, uniqueness: true
-
-
-
-
+  validates :name, presence: true
+  validates :name, length: { minimum: 2 }
+  validates :name, uniqueness: true
 end

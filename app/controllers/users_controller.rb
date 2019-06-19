@@ -6,9 +6,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @trees = Tree.all
-     # @trees.each do |tree|
-     #   tree.user.name
+    @trees = Tree.select { |t| t.user_id == @user.id }
   end
 
   def new
