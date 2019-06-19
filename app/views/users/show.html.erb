@@ -1,0 +1,9 @@
+<h1><%= @user.name %> has helped plant the following <%= @trees.count %> trees:</h1>
+<div class="show-page-list">
+  <% @trees.each do |tree| %>
+    <h3><%= link_to tree.species, tree %> in <%= link_to tree.location.name, tree.location %></h3>
+    <% if tree != @trees.last %>
+      <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h3>
+    <% end %>
+  <% end %>
+</div>

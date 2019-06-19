@@ -6,9 +6,7 @@ User.destroy_all
 Tree.destroy_all
 
 def tree_list
-  tree_wiki = Wikipedia.find("List of tree genera")
-  trees = tree_wiki.content.scan /\'\'\w+\'\'|\[\[\w+\]\]/
-  trees.map { |tree| tree.gsub /\'|\[|\]/, "" }
+  Wikipedia.find("List of tree genera").content.scan(/\'\'\w+\'\'|\[\[\w+\]\]/).map { |tree| tree.gsub /\'|\[|\]/, "" }[2..-1]
 end
 
 locations = []

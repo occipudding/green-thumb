@@ -1,3 +1,5 @@
 <h1><%= @tree.species %></h1>
-<h2>Located at: <%= Location.find(@tree.location_id).name %></h2>
-<h3>Planted by: <%= User.find(@tree.user_id).name %></h3>
+<h2>Located at: <%= link_to Location.find(@tree.location_id).name, location_path(@tree.location_id) %></h2>
+<div class="show-page-list">
+  <h3>Planted by: <%= link_to User.find(@tree.user_id).name, user_path(@tree.user_id) %></h3>
+</div>

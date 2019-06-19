@@ -1,5 +1,10 @@
 <h1><%= @location.name %></h1>
 <h2>Trees at this location:</h2>
-<% @trees.each do |tree| %>
-<h3><%= tree.species.capitalize %>, planted by: <%= User.find(tree.user_id).name %></h3>
-<% end %>
+<div class="show-page-list">
+  <% @trees.each do |tree| %>
+    <h3><%= link_to tree.species.capitalize, tree %>, planted by: <%= link_to User.find(tree.user_id).name, User.find(tree.user_id)  %></h3>
+    <% if tree != @trees.last %>
+      <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h3>
+    <% end %>
+  <% end %>
+</div>

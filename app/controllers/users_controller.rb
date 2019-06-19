@@ -4,6 +4,8 @@ class UsersController < ApplicationController
   end
 
   def show
+    @user = User.find(params[:id])
+    @trees = Tree.select { |t| t.user_id == @user.id }
   end
 
   def new
