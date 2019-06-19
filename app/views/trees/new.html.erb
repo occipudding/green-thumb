@@ -1,2 +1,7 @@
-<%= form_tag  %>
+<%= form_for @tree do |f|  %>
+  <%= f.label :species %>
+  <%= f.select(:species, options_for_select(TREE_LIST)) %>
+  <%= f.label :location %>
+  <%= f.collection_select(:location_id, @locations, :id, :name) %>
+  <%= f.submit %>
 <% end %>
