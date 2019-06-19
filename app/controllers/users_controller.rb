@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
 
   def index
+    @users = User.all
   end
 
   def show
@@ -24,13 +25,23 @@ class UsersController < ApplicationController
   end
 
   def edit
-
+    @user = User.find(params[:id])
   end
 
   def update
+    @user = User.find(params[:id])
+    if @user.valid?
+    @user.update
+    redirect_to "/users/#{users.id}"
+    else
+    flash[:erros] = @user.erros.full.messages
+      redirect_to user_path(@user)
+    end
   end
 
   def destroy
+    @user = User.find(params[:id])
+    @user.destroy
   end
 
   private
