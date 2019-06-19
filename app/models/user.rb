@@ -1,11 +1,6 @@
 class User < ApplicationRecord
-
-   validates :name,  presence: true
-   validates :name, length: { minimum:6 }
-   # validates :name, :presence => {:message => "must be given please"}
+   validates :name, presence: true
+   validates :name, length: { minimum: 2 }
    validates :name, uniqueness: true
-
-
-
 
 end
