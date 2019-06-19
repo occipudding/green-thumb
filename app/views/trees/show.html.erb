@@ -5,5 +5,5 @@
   <h3>Planted by: <%= link_to User.find(@tree.user_id).name, user_path(@tree.user_id) %></h3>
 </div><br><br><br><br><br>
 <div class="tree-image">
-  <%= image_tag Wikipedia.find(@tree.species).image_urls[2] %>
+  <%= image_tag Wikipedia.find(@tree.species).main_image_url %>
 </div>
