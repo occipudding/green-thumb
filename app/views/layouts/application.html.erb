@@ -13,17 +13,12 @@
     <header>
       <% if @logged_in %>
         <p>Logged in as: <%= @current_user.name %></p>
-        <%= button_to "Log out #{@current_user.name}", "/logout", method: :delete %>
+        <div class="logged-in-status"><%= button_to "Log out #{@current_user.name}", "/logout", method: :delete %></div>
       <% else %>
         <p>
           <%= link_to "Log in", new_login_path %>
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           <%= link_to "Register", new_user_path %>
-        </p>
-      <% end %>
-      <% if flash[:messages] %>
-        <p class="message">
-          <%= flash[:messages] %>
         </p>
       <% end %>
     </header>
