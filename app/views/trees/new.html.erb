@@ -1,7 +1,10 @@
+<h1>Plant a Tree</h1>
+<br><br>
+
 <%= form_for @tree do |f|  %>
-  <%= f.label :species %>
-  <%= f.select :species, options_for_select(TREE_LIST) %>
-  <%= f.label :location %>
-  <%= f.collection_select :location_id, @locations, :id, :name %>
+  <%= f.label :species %>&nbsp;&nbsp;
+  <%= f.select :species, options_for_select(TREE_LIST) %>&nbsp;&nbsp;&nbsp;&nbsp;
+  <%= f.label :location %>&nbsp;&nbsp;
+  <%= f.collection_select :location_id, @locations, :id, :name %>&nbsp;&nbsp;&nbsp;&nbsp;
   <%= f.submit %>
 <% end %>

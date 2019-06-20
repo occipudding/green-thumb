@@ -30,18 +30,25 @@ h3 {
   float: right;
 }
 
+form {
+  text-align: center;
+}
+
 .show-page-list {
   letter-spacing: 3px;
   padding: 13px;
 }
 
-#page-container {
+.page-container {
   position: relative;
   min-height: 100vh;
+  top: 16px;
 }
 
-#content-wrap {
+.content-wrap {
+  margin-top: 3rem;
   padding-bottom: 2.5rem;
+  padding: 0 16px 40px 16px;
 }
 
 header {
