@@ -10,12 +10,14 @@ class TreesController < ApplicationController
   end
 
   def create
-    @tree = Tree.create(tree_params)
-    if @tree.valid?
+    # byebug
+    if @logged_in
+      @tree = Tree.create(species: tree_params[:species], age: tree_params[:age], user_id: @current_user.id, location_id: tree_params[:location_id])
       session[:tree_id] = @tree.id
-      redirect_to trees_path
+      redirect_to "/trees/#{@tree.id}"
     else
-      redirect_to new_tree_path
+      flash[:messages] = "Must be logged in to plant a tree."
+      redirect_to new_login_path
     end
   end
 
