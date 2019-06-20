@@ -12,6 +12,7 @@ body {
   font-family: "Draft Natural A Regular", Helvetica, Arial, sans-serif;
   background-color: #008012;
   margin: 0;
+  padding-top: 3rem;
 }
 
 h1 {
@@ -56,6 +57,10 @@ header {
   font-size: 18px;
   letter-spacing: 6px;
   background-color: #006812;
+}
+
+.logged-in-status {
+  padding-right: 30px;
 }
 
 header p {
