@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :locations, only: [:index, :show]
   resources :users
   resources :login, only: [:new, :create]
+  get '/register', to: "users#new"
   delete "/logout", to: "login#destroy"
   root "locations#index"
   # get 'sessions/new'
