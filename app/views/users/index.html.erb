@@ -1,5 +1,7 @@
-<ul>
-<% @users.each do |user| %>
-<li><%= user.name %></li>
-<% end %>
-</ul>
+<h1> 👩‍🌾 🌾 Users 👨🏿‍🌾 🌾 </h1>
+
+  <ul>
+  <% @users.each do |user| %>
+  <li><%= link_to user.name, user_path(user)  %></li>
+  <%end%>
+  </ul>
