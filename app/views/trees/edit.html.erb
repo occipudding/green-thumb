@@ -3,6 +3,6 @@
 
 <%= form_for @tree do |f|  %>
   <%= f.label :location %>&nbsp;&nbsp;
-  <%= f.collection_select :location_id, @locations, :id, :name %>&nbsp;&nbsp;&nbsp;&nbsp;
+  <%= f.collection_select :location_id, Location.all, :id, :name %>&nbsp;&nbsp;&nbsp;&nbsp;
   <%= f.submit %>
 <% end %>

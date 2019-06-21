@@ -27,9 +27,10 @@ class TreesController < ApplicationController
 
   def update
     @tree = Tree.find(params[:id])
-    @tree.update
+    @tree.update(location_id: params[:tree][:location_id])
+    redirect_to @tree
   end
-  
+
   private
 
   def tree_params
